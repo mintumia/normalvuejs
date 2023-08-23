@@ -1,18 +1,9 @@
 <template>
-<MintuChild/>
+  <MintuChild :username="getName" name="Mintu"/>
 
-  <div class="text-red-600 bg-slate-500">
-    <p>Lorem ipsum dolor sit amet.</p>
-  </div>
+  <div class="text-red-400 font-bold" ref="parent">This text From Parents</div>
 
-  <div class="flex text-green-600" v-for="item in users" :key="item.name">
-
-    <p>{{item.name}}</p>
-    <p class="font-bold">{{item.email}}</p>
-
-  </div>
-
-
+<div class="bg-slate-500 text-2xl text-white" >{{isClicked}}</div>
 </template>
 
 <script>
@@ -20,19 +11,38 @@ import MintuChild from "@/components/MintuChild.vue";
 
 
 export default {
-  name:'MintuParent',
+  name: 'MintuParent',
 
-  data(){
-    return{
-      users:[
-        {name:'anil', email:'anil@test.com'},
-        {name:'alam', email:'alam@test.com'},
-        {name:'nasir', email:'nasir@test.com'},
-        {name:'nahid', email:'nahid@test.com'},
+  data() {
+    return {
+      isClicked:false,
+      users: [
+        {name: 'anil', email: 'anil@test.com'},
+        {name: 'alam', email: 'alam@test.com'},
+        {name: 'nasir', email: 'nasir@test.com'},
+        {name: 'nahid', email: 'nahid@test.com'},
       ]
 
     }
 
+
+  },
+  methods: {
+    getName(name) {
+      this.$refs.parent.className = "text-red-400 font-bold bg-green-200";
+      if(this.$refs.parent.innerHTML.length >2 && this.isClicked == false){
+        this.$refs.parent.innerHTML = this.$refs.parent.innerHTML.toUpperCase();
+        this.isClicked = true;
+      }else {
+        this.isClicked = false;
+        this.$refs.parent.innerHTML = this.$refs.parent.innerHTML+" "+name.toLowerCase();
+        this.$refs.parent.className = "text-red-400 font-bold bg-blue-200";
+        setTimeout(()=>alert("TimeOut!"),3000);
+
+      }
+
+      //alert(this.$refs.parent.innerHTML.length + name);
+    }
   },
   components: {
     MintuChild
