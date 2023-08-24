@@ -4,6 +4,9 @@
   <div class="text-red-400 font-bold" ref="parent">This text From Parents</div>
 
 <div class="bg-slate-500 text-2xl text-white" >{{isClicked}}</div>
+  <input class="border-2 focus:bg-green-700 border-red-600 disabled:bg-sky-300" type="text" ref="fullname">
+  <button class="btn-blue" v-on:click="focused()" >Focus On</button>
+
 </template>
 
 <script>
@@ -42,6 +45,13 @@ export default {
       }
 
       //alert(this.$refs.parent.innerHTML.length + name);
+    },
+
+    focused(){
+    this.$refs.fullname.focus();
+
+
+
     }
   },
   components: {
