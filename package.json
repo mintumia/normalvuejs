@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build":"vue-cli-service build && tailwindcss -i ./resources/css/app.css -o public/plugins/tailwindcss/main.css -w",
-    "lint": "vue-cli-service lint",
-    "comments": "tailwindcss -i ./resources/css/app.css -o public/plugins/tailwindcss/main.css -w"
+    "build": "vue-cli-service build && tailwindcss -i ./resources/css/app.css -o public/plugins/tailwindcss/main.css -w",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.5",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
