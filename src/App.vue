@@ -1,8 +1,13 @@
 <template>
+
   <div>
-    <router-view></router-view>
+    <router-link to="/">Task Page</router-link>
+    |
+    <router-link to="/posts">Post Page</router-link>
   </div>
+  <router-view/>
 </template>
+
 
 <script>
 /*import router from "@/router";*/
@@ -17,10 +22,10 @@ import MintuParent from './components/MintuParent.vue';
 /*import homePage from "@/components/HomePage.vue";*/
 
 
+/*import TaskPage from "@/pages/TaskPage.vue";*/
+
 export default {
   name: 'App',
-
-
 
 
 }

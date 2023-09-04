@@ -1068,6 +1068,11 @@ select {
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
 }

@@ -7,7 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
-<div>Post Pages.</div>
+<div class="bg-indigo-600 text-white">Post Pages.</div>
 </template>
 
 <style scoped>

@@ -1,24 +1,26 @@
-import{createRouter,createWebHistory} from 'vue-router';
-import TaskPage from "@/pages/TaskPage.vue";
-import PostsPage from "@/pages/PostsPage.vue";
+import {createRouter, createWebHistory} from 'vue-router';
+import TaskPage from "./pages/TaskPage.vue";
+import PostsPage from "./pages/PostsPage.vue";
 
 
-const routes= [
+const routes = [
     {
-    path:'/',
-    component:TaskPage,
+        name: 'TaskPage',
+        path: '/',
+        component: TaskPage,
     },
     {
-        path:'/post',
-        component:PostsPage,
+        name: 'PostsPage',
+        path: '/posts',
+        component: PostsPage,
     }
-]
-
+];
 
 
 const router = createRouter({
-    history:createWebHistory,
-    routes:routes,
+   history: createWebHistory(process.env.BASE_URL),
+  //  history: createWebHistory(),//Same code Working
+    routes
 });
 
 export default router;

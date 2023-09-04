@@ -7,7 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
-<div>This Task Page.</div>
+<div class="bg-green-600 text-white">This Task Page.</div>
 </template>
 
 <style scoped>
